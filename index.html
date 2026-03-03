@@ -37,14 +37,16 @@
       align-items: center;
       gap: 14px;
     }
-    .logo {
-      width: 48px; height: 48px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+
+    /* ← CHANGED: was .logo with gradient background */
+    .logo-img {
+      width: 48px;
+      height: 48px;
       border-radius: 12px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px; font-weight: 800; color: #fff;
+      object-fit: cover;
       flex-shrink: 0;
     }
+
     header h1 { font-size: 22px; font-weight: 700; color: var(--text-1); }
     header p  { font-size: 13px; color: var(--text-2); margin-top: 2px; }
 
@@ -53,6 +55,18 @@
       text-align: center;
       padding: 64px 24px 48px;
     }
+
+    /* ← CHANGED: added hero logo styles */
+    .hero-logo {
+      width: 96px;
+      height: 96px;
+      border-radius: 24px;
+      object-fit: cover;
+      margin: 0 auto 24px;
+      display: block;
+      box-shadow: 0 8px 32px rgba(108,99,255,.35);
+    }
+
     .hero h2 {
       font-size: clamp(28px, 5vw, 42px);
       font-weight: 800;
@@ -152,7 +166,6 @@
       gap: 16px;
       margin-bottom: 48px;
     }
-    .info-item { }
     .info-item .label {
       font-size: 11px;
       font-weight: 600;
@@ -166,10 +179,7 @@
       color: var(--text-1);
       font-weight: 500;
     }
-    .info-item a {
-      color: var(--accent-2);
-      text-decoration: none;
-    }
+    .info-item a { color: var(--accent-2); text-decoration: none; }
     .info-item a:hover { text-decoration: underline; }
 
     /* ── Footer ── */
@@ -189,20 +199,31 @@
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header ← CHANGED: img tag instead of div with "B" -->
   <header>
-    <div class="logo" aria-hidden="true">B</div>
+    <img
+      class="logo-img"
+      src="./logo.png"
+      alt="BrainQ Logo"
+    />
     <div>
       <h1>BrainQ</h1>
       <p>Challenge Your Mind. Join the 1% of Thinkers.</p>
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- Hero ← CHANGED: logo.png added above heading -->
   <section class="hero">
+    <img
+      class="hero-logo"
+      src="./logo.png"
+      alt="BrainQ"
+    />
     <h2>Math Puzzles.<br>Sharper Mind.</h2>
-    <p>Challenge your brain with 1000+ math and logic puzzles.
-       Progressive difficulty, daily challenges, and streak tracking.</p>
+    <p>
+      Challenge your brain with 1000+ math and logic puzzles.
+      Progressive difficulty, daily challenges, and streak tracking.
+    </p>
     <a class="play-btn"
        href="https://play.google.com/store/apps/details?id=com.mathiqbox.mathiqbox"
        target="_blank" rel="noopener noreferrer">
