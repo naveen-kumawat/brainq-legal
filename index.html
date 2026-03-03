@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BrainQ — Challenge your brain with 1000+ math puzzles. Legal information, privacy policy, and terms of service." />
+  <title>BrainQ — Legal</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0f0f1a;
+      --surface:   #1a1a2e;
+      --accent:    #6c63ff;
+      --accent-2:  #a78bfa;
+      --text-1:    #f0f0ff;
+      --text-2:    #a0a0c0;
+      --radius:    12px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                   Roboto, Oxygen, sans-serif;
+      background: var(--bg);
+      color: var(--text-1);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid rgba(108,99,255,.25);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo {
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; font-weight: 800; color: #fff;
+      flex-shrink: 0;
+    }
+    header h1 { font-size: 22px; font-weight: 700; color: var(--text-1); }
+    header p  { font-size: 13px; color: var(--text-2); margin-top: 2px; }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 64px 24px 48px;
+    }
+    .hero h2 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: 16px;
+      color: var(--text-2);
+      max-width: 480px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
+    }
+    .play-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      transition: opacity .2s, transform .2s;
+    }
+    .play-btn:hover { opacity: .88; transform: translateY(-2px); }
+
+    /* ── Cards ── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      width: 100%;
+    }
+    .section-title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      margin-bottom: 16px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid rgba(108,99,255,.2);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color .2s, transform .2s, box-shadow .2s;
+      display: block;
+    }
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(108,99,255,.2);
+    }
+    .card-icon { font-size: 32px; margin-bottom: 14px; }
+    .card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+    .card .arrow {
+      display: inline-block;
+      margin-top: 16px;
+      color: var(--accent-2);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* ── Info strip ── */
+    .info-strip {
+      background: var(--surface);
+      border: 1px solid rgba(108,99,255,.15);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+    .info-item { }
+    .info-item .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      margin-bottom: 4px;
+    }
+    .info-item .value {
+      font-size: 14px;
+      color: var(--text-1);
+      font-weight: 500;
+    }
+    .info-item a {
+      color: var(--accent-2);
+      text-decoration: none;
+    }
+    .info-item a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: auto;
+      background: var(--surface);
+      border-top: 1px solid rgba(108,99,255,.15);
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-2);
+      line-height: 1.8;
+    }
+    footer a { color: var(--accent-2); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo" aria-hidden="true">B</div>
+    <div>
+      <h1>BrainQ</h1>
+      <p>Challenge Your Mind. Join the 1% of Thinkers.</p>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h2>Math Puzzles.<br>Sharper Mind.</h2>
+    <p>Challenge your brain with 1000+ math and logic puzzles.
+       Progressive difficulty, daily challenges, and streak tracking.</p>
+    <a class="play-btn"
+       href="https://play.google.com/store/apps/details?id=com.mathiqbox.mathiqbox"
+       target="_blank" rel="noopener noreferrer">
+      ▶ &nbsp;Get it on Google Play
+    </a>
+  </section>
+
+  <main>
+
+    <!-- Legal documents -->
+    <p class="section-title">Legal Documents</p>
+    <div class="cards">
+
+      <a class="card" href="./privacy-policy">
+        <div class="card-icon">🔒</div>
+        <h3>Privacy Policy</h3>
+        <p>How we collect, use, and protect your data. GDPR, CCPA, and COPPA compliant.</p>
+        <span class="arrow">Read Privacy Policy →</span>
+      </a>
+
+      <a class="card" href="./terms-of-service">
+        <div class="card-icon">📄</div>
+        <h3>Terms of Service</h3>
+        <p>The rules and guidelines that govern your use of the BrainQ application.</p>
+        <span class="arrow">Read Terms of Service →</span>
+      </a>
+
+    </div>
+
+    <!-- App info -->
+    <p class="section-title">App Information</p>
+    <div class="info-strip">
+      <div class="info-item">
+        <div class="label">Developer</div>
+        <div class="value">BrainQ</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Country</div>
+        <div class="value">India</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Last Updated</div>
+        <div class="value">March 01, 2026</div>
+      </div>
+      <div class="info-item">
+        <div class="label">Contact</div>
+        <div class="value">
+          <a href="mailto:srinfodevelopers@gmail.com">srinfodevelopers@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      <a href="./privacy-policy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="./terms-of-service">Terms of Service</a> &nbsp;·&nbsp;
+      <a href="mailto:srinfodevelopers@gmail.com">Contact</a>
+    </p>
+    <p style="margin-top:8px;">© 2026 BrainQ. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
