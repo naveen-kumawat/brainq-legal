@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BrainQ Privacy Policy — GDPR, CCPA, and COPPA compliant." />
+  <title>Privacy Policy — BrainQ</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0f0f1a;
+      --surface:  #1a1a2e;
+      --accent:   #6c63ff;
+      --accent-2: #a78bfa;
+      --text-1:   #f0f0ff;
+      --text-2:   #a0a0c0;
+      --text-3:   #6b6b8a;
+      --radius:   12px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                   Roboto, Oxygen, sans-serif;
+      background: var(--bg);
+      color: var(--text-1);
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid rgba(108,99,255,.25);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent-2);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(167,139,250,.3);
+      transition: background .2s;
+    }
+    .back-btn:hover { background: rgba(167,139,250,.1); }
+    header h1 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 80px; /* visual centering offset */
+    }
+
+    /* ── Layout ── */
+    .wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── Page title ── */
+    .page-title {
+      margin-bottom: 8px;
+    }
+    .page-title h2 {
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Meta badge ── */
+    .meta {
+      background: var(--surface);
+      border: 1px solid rgba(108,99,255,.2);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      margin: 20px 0 32px;
+      font-size: 13px;
+      color: var(--text-3);
+      font-style: italic;
+      line-height: 1.8;
+    }
+
+    /* ── Table of contents ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid rgba(108,99,255,.2);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+    .toc h3 {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      margin-bottom: 14px;
+    }
+    .toc ol {
+      list-style: none;
+      counter-reset: toc;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 4px 24px;
+    }
+    .toc ol li {
+      font-size: 13px;
+      color: var(--text-2);
+      line-height: 1.5;
+      padding: 3px 0;
+    }
+    .toc ol li a {
+      color: var(--text-2);
+      text-decoration: none;
+      transition: color .15s;
+    }
+    .toc ol li a:hover { color: var(--accent-2); }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 40px;
+      scroll-margin-top: 80px;
+    }
+    section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(108,99,255,.2);
+    }
+    section p {
+      font-size: 15px;
+      color: var(--text-2);
+      margin-bottom: 12px;
+      line-height: 1.8;
+    }
+    section ul, section ol {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    section li {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 4px;
+    }
+    section a {
+      color: var(--accent-2);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    section a:hover { text-decoration: underline; }
+
+    /* sub-headings within sections */
+    .sub {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      margin: 20px 0 8px;
+    }
+
+    /* highlight box */
+    .highlight {
+      background: rgba(108,99,255,.1);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.7;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid rgba(108,99,255,.15);
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-3);
+      line-height: 1.8;
+    }
+    footer a { color: var(--accent-2); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a class="back-btn" href="./">← Back</a>
+    <h1>Privacy Policy</h1>
+  </header>
+
+  <div class="wrapper">
+
+    <div class="page-title">
+      <h2>Privacy Policy</h2>
+    </div>
+
+    <div class="meta">
+      Last Updated: March 01, 2026<br>
+      Effective Date: March 01, 2026
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc">
+      <h3>Contents</h3>
+      <ol>
+        <li><a href="#s1">1. Introduction</a></li>
+        <li><a href="#s2">2. Information We Collect</a></li>
+        <li><a href="#s3">3. How We Use Your Information</a></li>
+        <li><a href="#s4">4. Advertising</a></li>
+        <li><a href="#s5">5. Third-Party Services</a></li>
+        <li><a href="#s6">6. Data Storage &amp; Security</a></li>
+        <li><a href="#s7">7. Children's Privacy</a></li>
+        <li><a href="#s8">8. Your Rights &amp; Choices</a></li>
+        <li><a href="#s9">9. Data Sharing &amp; Disclosure</a></li>
+        <li><a href="#s10">10. International Data Transfers</a></li>
+        <li><a href="#s11">11. Cookies &amp; Tracking Technologies</a></li>
+        <li><a href="#s12">12. Changes to This Privacy Policy</a></li>
+        <li><a href="#s13">13. Contact Us</a></li>
+      </ol>
+    </div>
+
+    <!-- Section 1 -->
+    <section id="s1">
+      <h2>1. Introduction</h2>
+      <p>
+        BrainQ ("we", "our", or "us") operates the <strong>BrainQ</strong> mobile
+        application (the "App"). This Privacy Policy explains how we collect, use,
+        disclose, and safeguard your information when you use our App.
+      </p>
+      <p>
+        By downloading, installing, or using BrainQ, you agree to the collection
+        and use of information in accordance with this Privacy Policy. If you do
+        not agree with the terms of this Privacy Policy, please do not use the App.
+      </p>
+      <p>
+        This policy applies to all users of BrainQ, regardless of location.
+        We comply with applicable data protection laws including the
+        <strong>General Data Protection Regulation (GDPR)</strong>, the
+        <strong>California Consumer Privacy Act (CCPA)</strong>, and the
+        <strong>Children's Online Privacy Protection Act (COPPA)</strong>.
+      </p>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="s2">
+      <h2>2. Information We Collect</h2>
+      <p>We collect information in the following categories:</p>
+
+      <p class="sub">A. Information You Provide Directly</p>
+      <ul>
+        <li>
+          <strong>Google Account Information:</strong> When you sign in with
+          Google Play Games, we receive your Google account display name and
+          unique identifier. We do not access your Google password, contacts,
+          emails, or other personal Google data.
+        </li>
+      </ul>
+
+      <p class="sub">B. Information Collected Automatically</p>
+      <ul>
+        <li>
+          <strong>Game Progress Data:</strong> Levels completed, completion times,
+          hint usage, daily challenge streaks, and achievement progress. This data
+          is stored locally on your device and optionally synced to our cloud
+          servers if you sign in.
+        </li>
+        <li>
+          <strong>Device Information:</strong> Device type, operating system
+          version, app version, and general device identifiers for analytics and
+          crash reporting purposes.
+        </li>
+        <li>
+          <strong>Usage Analytics:</strong> Screen views, feature usage patterns,
+          session duration, and interaction events. This data is collected in
+          aggregate and does not personally identify you.
+        </li>
+        <li>
+          <strong>Crash Reports:</strong> Technical information about app crashes
+          including device state, stack traces, and error messages to help us
+          identify and fix bugs.
+        </li>
+        <li>
+          <strong>Advertising Data:</strong> Google Advertising ID (where
+          permitted), ad interaction data (impressions, clicks), and ad format
+          preferences used by Google AdMob to serve relevant advertisements.
+        </li>
+      </ul>
+
+      <p class="sub">C. Information We Do NOT Collect</p>
+      <div class="highlight">
+        <ul>
+          <li>We do NOT collect your real name, physical address, phone number, or email address (unless you contact us directly).</li>
+          <li>We do NOT access your camera, microphone, contacts, photos, or files.</li>
+          <li>We do NOT track your precise GPS location.</li>
+          <li>We do NOT collect payment or financial information.</li>
+          <li>We do NOT collect health, biometric, or genetic data.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="s3">
+      <h2>3. How We Use Your Information</h2>
+      <p>We use the collected information for the following purposes:</p>
+      <ul>
+        <li><strong>App Functionality:</strong> To save and restore your game progress, maintain daily challenge streaks, track achievements, and provide cloud sync across devices.</li>
+        <li><strong>Advertising:</strong> To display advertisements through Google AdMob, including banner ads, interstitial ads, and rewarded video ads.</li>
+        <li><strong>Analytics &amp; Improvement:</strong> To understand how users interact with the App, identify popular features, detect issues, and improve the overall user experience.</li>
+        <li><strong>Crash Reporting:</strong> To identify, diagnose, and fix technical issues through Firebase Crashlytics.</li>
+        <li><strong>Notifications:</strong> To send local notifications including daily challenge reminders, streak warnings, and milestone celebrations. All notifications are processed locally on your device and can be disabled at any time in Settings.</li>
+        <li><strong>App Updates:</strong> To check for available app updates through Firebase Remote Config.</li>
+        <li><strong>Security:</strong> To detect and prevent fraud, unauthorized access, and other harmful activities.</li>
+      </ul>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="s4">
+      <h2>4. Advertising</h2>
+      <p>BrainQ is a free app supported by advertising. We use <strong>Google AdMob</strong> to display ads.</p>
+
+      <p class="sub">Types of Ads Displayed</p>
+      <ul>
+        <li><strong>Banner Ads:</strong> Small ads displayed at the top or bottom of certain screens (Home, Levels, Daily Challenge). NOT displayed during active gameplay.</li>
+        <li><strong>Interstitial Ads:</strong> Full-screen ads shown between game levels at natural transition points. Limited in frequency (no more than one every 2 minutes, with at least 4 levels between ads).</li>
+        <li><strong>Rewarded Video Ads:</strong> Optional video ads you choose to watch in exchange for in-game hints or puzzle solutions. You are never required to watch these ads.</li>
+      </ul>
+
+      <p class="sub">Ad Personalization</p>
+      <ul>
+        <li>Ads may be personalized based on your interests and app usage, subject to your consent.</li>
+        <li>You can manage your ad preferences through your device settings or the consent dialog.</li>
+        <li>You may opt out of personalized advertising through your device's advertising settings.</li>
+      </ul>
+
+      <p class="sub">Ad Content Rating</p>
+      <ul>
+        <li>Ad content is restricted to PG (Parental Guidance) rated content or below.</li>
+        <li>Ad requests are configured to show age-appropriate content for users aged 13+.</li>
+      </ul>
+
+      <p class="sub">Google's Role</p>
+      <p>
+        Google AdMob processes advertising data according to
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
+        We do not control the specific ads shown to you.
+      </p>
+      <p>
+        For more information about how Google uses your data for advertising, visit:<br>
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">
+          https://policies.google.com/technologies/partner-sites
+        </a>
+      </p>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="s5">
+      <h2>5. Third-Party Services</h2>
+      <p>We use the following third-party services that may collect data:</p>
+
+      <p class="sub">A. Google AdMob (Advertising)</p>
+      <ul>
+        <li><strong>Purpose:</strong> Display advertisements</li>
+        <li><strong>Data collected:</strong> Advertising ID, ad interaction data, device information</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
+      </ul>
+
+      <p class="sub">B. Firebase Analytics</p>
+      <ul>
+        <li><strong>Purpose:</strong> Understand app usage patterns</li>
+        <li><strong>Data collected:</strong> App events, screen views, user properties, session data</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+      </ul>
+
+      <p class="sub">C. Firebase Crashlytics</p>
+      <ul>
+        <li><strong>Purpose:</strong> Identify and fix app crashes</li>
+        <li><strong>Data collected:</strong> Crash logs, device state, stack traces</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+      </ul>
+
+      <p class="sub">D. Firebase Cloud Firestore</p>
+      <ul>
+        <li><strong>Purpose:</strong> Sync game progress across devices (optional, requires sign-in)</li>
+        <li><strong>Data collected:</strong> Game progress, achievements, streak data</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+      </ul>
+
+      <p class="sub">E. Firebase Authentication</p>
+      <ul>
+        <li><strong>Purpose:</strong> Authenticate users who sign in with Google</li>
+        <li><strong>Data collected:</strong> Google account identifier, display name</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+      </ul>
+
+      <p class="sub">F. Firebase Remote Config</p>
+      <ul>
+        <li><strong>Purpose:</strong> Check for app updates and configure features remotely</li>
+        <li><strong>Data collected:</strong> App version, device type</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">https://firebase.google.com/support/privacy</a></li>
+      </ul>
+
+      <p class="sub">G. Google Play Games Services</p>
+      <ul>
+        <li><strong>Purpose:</strong> Track and display game achievements</li>
+        <li><strong>Data collected:</strong> Player ID, achievement progress</li>
+        <li><strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
+      </ul>
+
+      <p>All third-party services are governed by their respective privacy policies. We encourage you to review them.</p>
+    </section>
+
+    <!-- Section 6 -->
+    <section id="s6">
+      <h2>6. Data Storage &amp; Security</h2>
+
+      <p class="sub">Local Storage</p>
+      <p>
+        Game progress, settings, and preferences are stored locally on your device
+        using encrypted local storage (Hive database and SharedPreferences).
+        This data remains on your device unless you choose to sign in and enable cloud sync.
+      </p>
+
+      <p class="sub">Cloud Storage</p>
+      <p>
+        If you sign in with Google Play Games, your game progress and achievements
+        are synced to Google Cloud Firestore servers. Cloud data is encrypted in
+        transit using TLS/SSL and encrypted at rest on Google's servers.
+        Cloud sync is optional and can be disabled by signing out.
+      </p>
+
+      <p class="sub">Data Retention</p>
+      <ul>
+        <li>Local data is retained until you delete it through the App's Settings or uninstall the App.</li>
+        <li>Cloud data is retained until you request deletion or your account is permanently deleted after the 15-day grace period.</li>
+        <li>Analytics data is retained by Google according to their policies (typically 14 months for user-level data).</li>
+        <li>Crash reports are retained for 90 days.</li>
+      </ul>
+
+      <p class="sub">Security Measures</p>
+      <ul>
+        <li>All network communications use HTTPS encryption.</li>
+        <li>Firebase services employ Google's enterprise-grade security infrastructure.</li>
+        <li>We do not store sensitive personal information on our servers.</li>
+      </ul>
+
+      <div class="highlight">
+        While we strive to protect your information, no method of electronic transmission
+        or storage is 100% secure. We cannot guarantee absolute security.
+      </div>
+    </section>
+
+    <!-- Section 7 -->
+    <section id="s7">
+      <h2>7. Children's Privacy</h2>
+      <p>
+        BrainQ is intended for users aged <strong>13 and above</strong>.
+        This App is NOT directed at children under the age of 13.
+      </p>
+
+      <p class="sub">Target Audience</p>
+      <ul>
+        <li>This App is intended for a general audience aged 13 and older.</li>
+        <li>We do not knowingly collect personal information from children under 13.</li>
+        <li>We do not target or market the App to children under 13.</li>
+      </ul>
+
+      <p class="sub">If You Are Under 13</p>
+      <div class="highlight">
+        Please do not use this App. Do not provide any personal information to us.
+      </div>
+
+      <p class="sub">Parental Notice</p>
+      <p>
+        If you are a parent or guardian and believe your child under 13 has used
+        this App or provided personal information to us, please contact us at
+        <a href="mailto:srinfodevelopers@gmail.com">srinfodevelopers@gmail.com</a>.
+        We will promptly investigate and delete any such information.
+      </p>
+
+      <p class="sub">COPPA Compliance</p>
+      <p>
+        We comply with the Children's Online Privacy Protection Act (COPPA).
+        Since our App targets users aged 13 and above, we do not implement
+        child-directed treatment by default. We do not knowingly collect, use,
+        or disclose personal information from children under 13.
+      </p>
+    </section>
+
+    <!-- Section 8 -->
+    <section id="s8">
+      <h2>8. Your Rights &amp; Choices</h2>
+
+      <p class="sub">A. All Users</p>
+      <ul>
+        <li><strong>Access:</strong> View your game data within the App (Settings shows your statistics).</li>
+        <li><strong>Delete Local Data:</strong> Delete all local game progress through Settings → Delete All Data.</li>
+        <li><strong>Delete Account:</strong> Request account deletion through Settings → Delete Account, including a 15-day cancellable grace period.</li>
+        <li><strong>Notification Control:</strong> Enable or disable all notifications through Settings → Notifications.</li>
+        <li><strong>Ad Preferences:</strong> Manage ad personalization through the consent dialog or your device's advertising settings.</li>
+      </ul>
+
+      <p class="sub">B. EU / EEA Users (GDPR Rights)</p>
+      <ul>
+        <li><strong>Right to Access:</strong> Request a copy of your personal data.</li>
+        <li><strong>Right to Rectification:</strong> Request correction of inaccurate data.</li>
+        <li><strong>Right to Erasure:</strong> Request deletion of your personal data ("right to be forgotten").</li>
+        <li><strong>Right to Restrict Processing:</strong> Request limitation of data processing.</li>
+        <li><strong>Right to Data Portability:</strong> Request your data in a machine-readable format.</li>
+        <li><strong>Right to Object:</strong> Object to data processing based on legitimate interests.</li>
+        <li><strong>Right to Withdraw Consent:</strong> Withdraw consent for ad personalization at any time.</li>
+        <li><strong>Right to Lodge a Complaint:</strong> File a complaint with your local data protection authority.</li>
+      </ul>
+
+      <p class="sub">C. California Users (CCPA Rights)</p>
+      <ul>
+        <li><strong>Right to Know:</strong> Request disclosure of personal information collected.</li>
+        <li><strong>Right to Delete:</strong> Request deletion of personal information.</li>
+        <li><strong>Right to Opt-Out:</strong> Opt out of the sale of personal information. <em>Note: We do not sell personal information as defined by CCPA.</em></li>
+        <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your CCPA rights.</li>
+      </ul>
+
+      <p>
+        To exercise any of these rights, please contact us at
+        <a href="mailto:srinfodevelopers@gmail.com">srinfodevelopers@gmail.com</a>.
+        We will respond within 30 days (or as required by applicable law).
+      </p>
+    </section>
+
+    <!-- Section 9 -->
+    <section id="s9">
+      <h2>9. Data Sharing &amp; Disclosure</h2>
+      <div class="highlight">
+        We do not sell your personal information to third parties.
+      </div>
+      <p>We may share data in the following circumstances:</p>
+      <ul>
+        <li><strong>With Google:</strong> As described in Section 5, we share data with Google services (AdMob, Firebase, Play Games) for advertising, analytics, crash reporting, and cloud storage purposes.</li>
+        <li><strong>Legal Requirements:</strong> We may disclose your information if required by law, regulation, legal process, or governmental request.</li>
+        <li><strong>Protection of Rights:</strong> We may disclose information to protect our rights, privacy, safety, or property, or that of our users or the public.</li>
+        <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your data may be transferred to the acquiring entity.</li>
+        <li><strong>With Your Consent:</strong> We may share data for any other purpose with your explicit consent.</li>
+      </ul>
+    </section>
+
+    <!-- Section 10 -->
+    <section id="s10">
+      <h2>10. International Data Transfers</h2>
+      <p>
+        Your information may be transferred to and processed in countries other
+        than your country of residence, including the United States (where Google's
+        servers are located).
+      </p>
+      <p>
+        If you are located in the European Economic Area (EEA), United Kingdom,
+        or Switzerland, please note that data transferred to the United States or
+        other countries may not have the same data protection laws as your jurisdiction.
+      </p>
+      <p>
+        We rely on Google's data processing agreements and
+        <strong>Standard Contractual Clauses (SCCs)</strong> to ensure appropriate
+        safeguards for international data transfers.
+      </p>
+    </section>
+
+    <!-- Section 11 -->
+    <section id="s11">
+      <h2>11. Cookies &amp; Tracking Technologies</h2>
+      <p>
+        The App does not use cookies directly. However, third-party services
+        integrated into the App (such as Google AdMob and Firebase) may use
+        similar tracking technologies including:
+      </p>
+      <ul>
+        <li><strong>Google Advertising ID:</strong> A resettable device identifier used for ad personalization.</li>
+        <li><strong>Firebase Instance ID:</strong> Used to identify unique app installations for analytics.</li>
+        <li><strong>Local Storage:</strong> Used to save game progress and preferences on your device.</li>
+      </ul>
+      <p>
+        You can reset your Google Advertising ID or opt out of personalized
+        advertising through your device settings:
+      </p>
+      <ul>
+        <li><strong>Android:</strong> Settings → Google → Ads → Reset advertising ID / Opt out of Ads Personalization.</li>
+      </ul>
+    </section>
+
+    <!-- Section 12 -->
+    <section id="s12">
+      <h2>12. Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we make changes:</p>
+      <ul>
+        <li>We will update the "Last Updated" date at the top of this policy.</li>
+        <li>For significant changes, we may provide additional notice through the App (such as an in-app notification or update dialog).</li>
+        <li>Your continued use of the App after changes are posted constitutes your acceptance of the updated Privacy Policy.</li>
+      </ul>
+      <p>We encourage you to review this Privacy Policy periodically for any changes.</p>
+    </section>
+
+    <!-- Section 13 -->
+    <section id="s13">
+      <h2>13. Contact Us</h2>
+      <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:srinfodevelopers@gmail.com">srinfodevelopers@gmail.com</a></li>
+        <li><strong>Developer:</strong> BrainQ</li>
+        <li><strong>Country:</strong> India</li>
+      </ul>
+      <p>For GDPR-related inquiries, you may also contact your local data protection authority.</p>
+      <p>For Google-specific data concerns, you can visit:</p>
+      <ul>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy &amp; Terms</a></li>
+        <li><a href="https://myaccount.google.com" target="_blank" rel="noopener">Google Account Settings</a></li>
+      </ul>
+    </section>
+
+  </div><!-- /wrapper -->
+
+  <footer>
+    <p>
+      <a href="./">Home</a> &nbsp;·&nbsp;
+      <a href="./privacy-policy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="./terms-of-service">Terms of Service</a> &nbsp;·&nbsp;
+      <a href="mailto:srinfodevelopers@gmail.com">Contact</a>
+    </p>
+    <p style="margin-top:8px;">© 2026 BrainQ. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
