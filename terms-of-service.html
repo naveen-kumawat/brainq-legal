@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BrainQ Terms of Service — legally compliant terms governing your use of the BrainQ app." />
+  <title>Terms of Service — BrainQ</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0f0f1a;
+      --surface:  #1a1a2e;
+      --accent:   #6c63ff;
+      --accent-2: #a78bfa;
+      --text-1:   #f0f0ff;
+      --text-2:   #a0a0c0;
+      --text-3:   #6b6b8a;
+      --radius:   12px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                   Roboto, Oxygen, sans-serif;
+      background: var(--bg);
+      color: var(--text-1);
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid rgba(108,99,255,.25);
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent-2);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(167,139,250,.3);
+      transition: background .2s;
+    }
+    .back-btn:hover { background: rgba(167,139,250,.1); }
+    header h1 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-left: auto;
+      margin-right: auto;
+      padding-right: 80px;
+    }
+
+    /* ── Layout ── */
+    .wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .page-title h2 {
+      font-size: clamp(26px, 4vw, 36px);
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .meta {
+      background: var(--surface);
+      border: 1px solid rgba(108,99,255,.2);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      margin: 20px 0 32px;
+      font-size: 13px;
+      color: var(--text-3);
+      font-style: italic;
+      line-height: 1.8;
+    }
+
+    .toc {
+      background: var(--surface);
+      border: 1px solid rgba(108,99,255,.2);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 40px;
+    }
+    .toc h3 {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      margin-bottom: 14px;
+    }
+    .toc ol {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 4px 24px;
+    }
+    .toc ol li {
+      font-size: 13px;
+      color: var(--text-2);
+      line-height: 1.5;
+      padding: 3px 0;
+    }
+    .toc ol li a { color: var(--text-2); text-decoration: none; transition: color .15s; }
+    .toc ol li a:hover { color: var(--accent-2); }
+
+    section {
+      margin-bottom: 40px;
+      scroll-margin-top: 80px;
+    }
+    section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(108,99,255,.2);
+    }
+    section p {
+      font-size: 15px;
+      color: var(--text-2);
+      margin-bottom: 12px;
+      line-height: 1.8;
+    }
+    section ul, section ol.legal {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+    section li {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 4px;
+    }
+    section a { color: var(--accent-2); text-decoration: none; word-break: break-all; }
+    section a:hover { text-decoration: underline; }
+
+    .sub {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+      margin: 20px 0 8px;
+    }
+
+    .highlight {
+      background: rgba(108,99,255,.1);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.7;
+    }
+
+    .warning {
+      background: rgba(239,68,68,.08);
+      border-left: 3px solid #ef4444;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #fca5a5;
+      line-height: 1.7;
+      font-weight: 500;
+    }
+
+    /* uppercase legal blocks */
+    .legal-caps {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    footer {
+      background: var(--surface);
+      border-top: 1px solid rgba(108,99,255,.15);
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: var(--text-3);
+      line-height: 1.8;
+    }
+    footer a { color: var(--accent-2); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="back-btn" href="./">← Back</a>
+    <h1>Terms of Service</h1>
+  </header>
+
+  <div class="wrapper">
+
+    <div class="page-title">
+      <h2>Terms of Service</h2>
+    </div>
+
+    <div class="meta">
+      Last Updated: March 01, 2026<br>
+      Effective Date: February 01, 2026
+    </div>
+
+    <!-- TOC -->
+    <div class="toc">
+      <h3>Contents</h3>
+      <ol>
+        <li><a href="#t1">1. Acceptance of Terms</a></li>
+        <li><a href="#t2">2. Eligibility</a></li>
+        <li><a href="#t3">3. Description of Service</a></li>
+        <li><a href="#t4">4. User Accounts</a></li>
+        <li><a href="#t5">5. Advertising</a></li>
+        <li><a href="#t6">6. In-App Content &amp; Intellectual Property</a></li>
+        <li><a href="#t7">7. Prohibited Conduct</a></li>
+        <li><a href="#t8">8. Notifications</a></li>
+        <li><a href="#t9">9. Data &amp; Privacy</a></li>
+        <li><a href="#t10">10. Third-Party Services</a></li>
+        <li><a href="#t11">11. Disclaimer of Warranties</a></li>
+        <li><a href="#t12">12. Limitation of Liability</a></li>
+        <li><a href="#t13">13. Indemnification</a></li>
+        <li><a href="#t14">14. Termination</a></li>
+        <li><a href="#t15">15. Governing Law &amp; Dispute Resolution</a></li>
+        <li><a href="#t16">16. Changes to the App</a></li>
+        <li><a href="#t17">17. Severability</a></li>
+        <li><a href="#t18">18. Entire Agreement</a></li>
+        <li><a href="#t19">19. Contact Information</a></li>
+      </ol>
+    </div>
+
+    <!-- Section 1 -->
+    <section id="t1">
+      <h2>1. Acceptance of Terms</h2>
+      <p>
+        By downloading, installing, accessing, or using <strong>BrainQ</strong>
+        (the "App"), you agree to be bound by these Terms of Service ("Terms").
+        If you do not agree to these Terms, do not use the App.
+      </p>
+      <p>
+        These Terms constitute a legally binding agreement between you and
+        <strong>BrainQ</strong> ("we", "our", or "us") governing your use of the App.
+      </p>
+      <p>
+        We reserve the right to modify these Terms at any time. Changes will be
+        effective immediately upon posting within the App. Your continued use of
+        the App after any changes constitutes acceptance of the modified Terms.
+      </p>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="t2">
+      <h2>2. Eligibility</h2>
+      <p class="sub">Age Requirements</p>
+      <ul>
+        <li>You must be at least <strong>13 years of age</strong> to use the App.</li>
+        <li>If you are between 13 and 18 years of age, you must have permission from a parent or legal guardian.</li>
+        <li>If you are under 13, please do not use this App.</li>
+      </ul>
+      <div class="highlight">
+        By using the App, you represent and warrant that you are at least 13 years
+        of age. If we learn that we have collected information from a user under 13,
+        we may terminate their access and delete their data.
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="t3">
+      <h2>3. Description of Service</h2>
+      <p>BrainQ is a free-to-play math and logic puzzle game that includes:</p>
+      <ul>
+        <li>Progressive puzzle levels with increasing difficulty</li>
+        <li>Daily challenges with streak tracking</li>
+        <li>Achievement system</li>
+        <li>Optional Google Play Games integration</li>
+        <li>Optional cloud save functionality</li>
+        <li>Local notifications for reminders (can be disabled)</li>
+      </ul>
+      <p>
+        The App is provided on an "as is" and "as available" basis. We reserve the
+        right to modify, suspend, or discontinue any feature of the App at any time
+        without prior notice.
+      </p>
+      <div class="highlight">
+        BrainQ is an independently developed entertainment application. It is not
+        affiliated with, endorsed by, or associated with any government body,
+        educational institution, or other organization. The App is intended purely
+        for entertainment and casual brain-training purposes.
+      </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="t4">
+      <h2>4. User Accounts</h2>
+
+      <p class="sub">Google Play Games Sign-In</p>
+      <ul>
+        <li>The App offers optional sign-in through Google Play Games.</li>
+        <li>By signing in, you authorize us to access your Google Play Games profile (display name and player ID only).</li>
+        <li>You are responsible for maintaining the security of your Google account.</li>
+        <li>You must not share your account access with others.</li>
+      </ul>
+
+      <p class="sub">Cloud Save</p>
+      <ul>
+        <li>If you sign in, your game progress may be synced to our cloud servers.</li>
+        <li>Cloud sync is optional and can be disabled by signing out.</li>
+        <li>We are not responsible for data loss due to network failures, device issues, or other circumstances beyond our control.</li>
+      </ul>
+
+      <p class="sub">Account Deletion</p>
+      <ul>
+        <li>You may request deletion of your account and all associated data through the App's Settings.</li>
+        <li>Account deletion requests include a <strong>15-day grace period</strong> during which you can cancel the request.</li>
+        <li>After the grace period, all data associated with your account will be permanently and irreversibly deleted.</li>
+        <li>Immediate deletion without a grace period is also available if you prefer.</li>
+      </ul>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="t5">
+      <h2>5. Advertising</h2>
+      <p>The App is supported by advertising through <strong>Google AdMob</strong>.</p>
+
+      <p class="sub">Ad Types</p>
+      <ul>
+        <li><strong>Banner Ads:</strong> Displayed at the top or bottom of certain non-gameplay screens.</li>
+        <li><strong>Interstitial Ads:</strong> Full-screen ads displayed at natural transition points between game levels. You can close these ads after a brief display period.</li>
+        <li><strong>Rewarded Video Ads:</strong> Optional video ads that you may choose to watch in exchange for in-game benefits (hints and puzzle solutions).</li>
+      </ul>
+
+      <p class="sub">Your Choices</p>
+      <ul>
+        <li>Rewarded ads are entirely optional — you are never required to watch them.</li>
+        <li>You can manage ad personalization preferences through the consent dialog or your device settings.</li>
+        <li>We do not control the specific content of ads served by Google AdMob.</li>
+      </ul>
+
+      <p class="sub">Ad Interaction</p>
+      <div class="warning">
+        You must not artificially interact with advertisements, including repeatedly
+        clicking on ads or using automated tools to generate ad interactions.
+        Such behavior may result in your access to the App being restricted.
+      </div>
+      <p>
+        For more information about Google's advertising practices, visit:
+        <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">
+          https://policies.google.com/technologies/ads
+        </a>
+      </p>
+    </section>
+
+    <!-- Section 6 -->
+    <section id="t6">
+      <h2>6. In-App Content &amp; Intellectual Property</h2>
+
+      <p class="sub">Ownership</p>
+      <p>
+        All content in the App, including but not limited to puzzles, images, text,
+        graphics, logos, icons, audio files, and software code, is owned by
+        BrainQ or its licensors and is protected by copyright, trademark, and
+        other intellectual property laws.
+      </p>
+
+      <p class="sub">License</p>
+      <p>
+        We grant you a limited, non-exclusive, non-transferable, revocable license
+        to use the App for personal, non-commercial purposes.
+        This license does not permit you to:
+      </p>
+      <ul>
+        <li>Modify, adapt, or create derivative works of the App</li>
+        <li>Reverse engineer, decompile, or disassemble the App</li>
+        <li>Remove any copyright, trademark, or proprietary notices</li>
+        <li>Use the App for any commercial purpose</li>
+        <li>Redistribute, sublicense, or transfer the App</li>
+      </ul>
+
+      <p class="sub">Puzzle Content</p>
+      <ul>
+        <li>All puzzles, solutions, hints, and related content are original works owned by BrainQ.</li>
+        <li>You may share puzzle screenshots through the App's built-in share feature for personal, non-commercial purposes only.</li>
+      </ul>
+
+      <p class="sub">User-Generated Content</p>
+      <p>
+        The App does not include user-generated content features. You cannot upload,
+        post, or share content within the App beyond using the built-in share feature.
+      </p>
+    </section>
+
+    <!-- Section 7 -->
+    <section id="t7">
+      <h2>7. Prohibited Conduct</h2>
+      <p>You agree <strong>NOT</strong> to:</p>
+      <ul>
+        <li>Use the App in any way that violates applicable laws or regulations.</li>
+        <li>Attempt to gain unauthorized access to the App, other users' data, or our servers.</li>
+        <li>Use cheats, exploits, automation tools, bots, hacks, mods, or any unauthorized third-party software to modify or interfere with the App.</li>
+        <li>Interfere with or disrupt the App's servers, networks, or infrastructure.</li>
+        <li>Artificially manipulate game progress, achievements, or statistics.</li>
+        <li>Artificially generate ad impressions or clicks.</li>
+        <li>Impersonate any person or entity.</li>
+        <li>Reverse engineer, decompile, or disassemble any part of the App.</li>
+        <li>Use the App to collect information about other users.</li>
+        <li>Use the App for any commercial purpose without our written consent.</li>
+      </ul>
+      <div class="warning">
+        Violation of these terms may result in immediate termination of your access to the App.
+      </div>
+    </section>
+
+    <!-- Section 8 -->
+    <section id="t8">
+      <h2>8. Notifications</h2>
+      <p>The App may send local notifications to your device, including:</p>
+      <ul>
+        <li>Daily challenge reminders</li>
+        <li>Streak warnings</li>
+        <li>Milestone celebrations</li>
+        <li>Welcome messages (for new users)</li>
+        <li>Inactivity reminders</li>
+      </ul>
+      <div class="highlight">
+        <strong>Important:</strong> All notifications are processed and scheduled
+        locally on your device. No push notification servers are involved.
+        You can disable all notifications at any time through
+        Settings → Notifications. Disabling notifications will not affect your
+        ability to use the App.
+      </div>
+    </section>
+
+    <!-- Section 9 -->
+    <section id="t9">
+      <h2>9. Data &amp; Privacy</h2>
+            <p>
+        Your privacy is important to us. Our collection and use of personal data
+        is governed by our
+        <a href="./privacy-policy">Privacy Policy</a>,
+        which is incorporated into these Terms by reference.
+      </p>
+      <p>By using the App, you consent to the collection and use of your information as described in our Privacy Policy.</p>
+      <p class="sub">Key Points</p>
+      <ul>
+        <li>We collect minimal data necessary for App functionality.</li>
+        <li>We use Google AdMob for advertising, which may collect advertising-related data.</li>
+        <li>We use Firebase for analytics, crash reporting, and cloud storage.</li>
+        <li>You can delete your data at any time through the App's Settings.</li>
+        <li>We do not sell your personal information.</li>
+      </ul>
+      <p>For complete details, please review our <a href="./privacy-policy">Privacy Policy</a>.</p>
+    </section>
+
+    <!-- Section 10 -->
+    <section id="t10">
+      <h2>10. Third-Party Services</h2>
+      <p>The App integrates with the following third-party services:</p>
+      <ul>
+        <li><strong>Google AdMob:</strong> Advertising</li>
+        <li><strong>Firebase:</strong> Analytics, crash reporting, cloud storage, authentication, remote config</li>
+        <li><strong>Google Play Games:</strong> Achievements and game services</li>
+        <li><strong>Google Sign-In:</strong> Authentication</li>
+      </ul>
+      <p>Each third-party service is governed by its own terms of service and privacy policy:</p>
+      <ul>
+        <li>
+          <a href="https://policies.google.com/terms" target="_blank" rel="noopener">
+            Google Terms of Service
+          </a>
+        </li>
+        <li>
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+            Google Privacy Policy
+          </a>
+        </li>
+        <li>
+          <a href="https://firebase.google.com/terms" target="_blank" rel="noopener">
+            Firebase Terms
+          </a>
+        </li>
+      </ul>
+      <div class="highlight">
+        We are not responsible for the practices, content, or availability of
+        third-party services. Your use of these services is at your own risk.
+      </div>
+    </section>
+
+    <!-- Section 11 -->
+    <section id="t11">
+      <h2>11. Disclaimer of Warranties</h2>
+      <p class="legal-caps">
+        THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY
+        KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO:
+      </p>
+      <ul>
+        <li>IMPLIED WARRANTIES OF MERCHANTABILITY</li>
+        <li>FITNESS FOR A PARTICULAR PURPOSE</li>
+        <li>NON-INFRINGEMENT</li>
+        <li>ACCURACY OR RELIABILITY OF CONTENT</li>
+      </ul>
+      <p class="sub">We Do Not Warrant That</p>
+      <ul>
+        <li>The App will be uninterrupted, secure, or error-free</li>
+        <li>Defects will be corrected</li>
+        <li>The App is free of viruses or harmful components</li>
+        <li>The results obtained from use of the App will be accurate or reliable</li>
+      </ul>
+      <div class="warning">
+        YOUR USE OF THE APP IS AT YOUR SOLE RISK.
+      </div>
+      <p>
+        This disclaimer applies to the fullest extent permitted by applicable law.
+        Some jurisdictions do not allow the exclusion of implied warranties, so
+        some of these exclusions may not apply to you.
+      </p>
+    </section>
+
+    <!-- Section 12 -->
+    <section id="t12">
+      <h2>12. Limitation of Liability</h2>
+      <p class="legal-caps">
+        TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL
+        BRAINQ, ITS DIRECTORS, EMPLOYEES, PARTNERS, AGENTS, SUPPLIERS, OR
+        AFFILIATES BE LIABLE FOR:
+      </p>
+      <ul>
+        <li>Any indirect, incidental, special, consequential, or punitive damages</li>
+        <li>Loss of profits, data, use, goodwill, or other intangible losses</li>
+        <li>Any damages resulting from your access to or use of (or inability to use) the App</li>
+        <li>Any conduct or content of third parties on or through the App</li>
+        <li>Any content obtained from the App</li>
+        <li>Unauthorized access, use, or alteration of your data</li>
+        <li>Loss of game progress or achievements</li>
+        <li>Interruption or cessation of the App's functionality</li>
+      </ul>
+      <div class="warning">
+        OUR TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID US IN THE
+        TWELVE (12) MONTHS PRIOR TO THE CLAIM (WHICH, FOR A FREE APP, IS ZERO).
+      </div>
+      <p>
+        Some jurisdictions do not allow the limitation of liability for certain
+        damages, so some of these limitations may not apply to you.
+      </p>
+    </section>
+
+    <!-- Section 13 -->
+    <section id="t13">
+      <h2>13. Indemnification</h2>
+      <p>
+        You agree to defend, indemnify, and hold harmless BrainQ and its officers,
+        directors, employees, and agents from and against any claims, liabilities,
+        damages, judgments, awards, losses, costs, expenses, or fees (including
+        reasonable attorneys' fees) arising out of or relating to:
+      </p>
+      <ul>
+        <li>Your violation of these Terms</li>
+        <li>Your use of the App</li>
+        <li>Your violation of any rights of a third party</li>
+        <li>Your violation of any applicable laws or regulations</li>
+      </ul>
+    </section>
+
+    <!-- Section 14 -->
+    <section id="t14">
+      <h2>14. Termination</h2>
+
+      <p class="sub">Termination by You</p>
+      <ul>
+        <li>You may stop using the App at any time by uninstalling it from your device.</li>
+        <li>You may delete your account and data through Settings → Delete Account.</li>
+      </ul>
+
+      <p class="sub">Termination by Us</p>
+      <p>
+        We may terminate or suspend your access to the App at any time, without
+        prior notice, for any reason, including:
+      </p>
+      <ul>
+        <li>Violation of these Terms</li>
+        <li>Artificial manipulation of ad interactions</li>
+        <li>Use of cheats, exploits, or unauthorized tools</li>
+        <li>Any other conduct we deem harmful to the App or other users</li>
+      </ul>
+
+      <p class="sub">Effect of Termination</p>
+      <ul>
+        <li>Upon termination, your right to use the App ceases immediately.</li>
+        <li>
+          Provisions of these Terms that by their nature should survive termination
+          shall survive, including Disclaimers, Limitation of Liability, and
+          Indemnification.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Section 15 -->
+    <section id="t15">
+      <h2>15. Governing Law &amp; Dispute Resolution</h2>
+
+      <p class="sub">Governing Law</p>
+      <p>
+        These Terms shall be governed by and construed in accordance with the laws
+        of <strong>India</strong>, without regard to conflict of law principles.
+      </p>
+
+      <p class="sub">Dispute Resolution</p>
+      <ul>
+        <li>
+          Any dispute arising from these Terms or your use of the App shall first
+          be attempted to be resolved through informal negotiation by contacting us
+          at <a href="mailto:srinfodevelopers@gmail.com">srinfodevelopers@gmail.com</a>.
+        </li>
+        <li>
+          If informal resolution fails, disputes shall be resolved through binding
+          arbitration in accordance with the rules of the applicable arbitration
+          authority in India.
+        </li>
+        <li>
+          You agree to waive any right to participate in a class action lawsuit
+          or class-wide arbitration.
+        </li>
+      </ul>
+
+      <p class="sub">Exceptions</p>
+      <p>
+        Either party may seek injunctive or equitable relief in any court of
+        competent jurisdiction to protect intellectual property rights.
+      </p>
+    </section>
+
+    <!-- Section 16 -->
+    <section id="t16">
+      <h2>16. Changes to the App</h2>
+      <p>We reserve the right to:</p>
+      <ul>
+        <li>Modify, update, or discontinue any feature of the App at any time</li>
+        <li>Change puzzle content, difficulty levels, or progression systems</li>
+        <li>Modify achievement requirements or rewards</li>
+        <li>Update ad formats, frequency, or placement</li>
+        <li>Introduce new features or remove existing ones</li>
+      </ul>
+      <p>
+        We will endeavor to provide notice of significant changes through the App's
+        update mechanism, but are not obligated to do so.
+      </p>
+      <div class="highlight">
+        Continued use of the App after changes constitutes acceptance of those changes.
+      </div>
+    </section>
+
+    <!-- Section 17 -->
+    <section id="t17">
+      <h2>17. Severability</h2>
+      <p>
+        If any provision of these Terms is found to be unenforceable or invalid by
+        a court of competent jurisdiction, that provision shall be limited or
+        eliminated to the minimum extent necessary, and the remaining provisions
+        shall remain in full force and effect.
+      </p>
+    </section>
+
+    <!-- Section 18 -->
+    <section id="t18">
+      <h2>18. Entire Agreement</h2>
+      <p>
+        These Terms, together with our
+        <a href="./privacy-policy">Privacy Policy</a>,
+        constitute the entire agreement between you and BrainQ regarding your use
+        of the App and supersede all prior agreements, understandings, or
+        representations.
+      </p>
+      <p>
+        No waiver of any term shall be deemed a further or continuing waiver of
+        such term or any other term. Our failure to enforce any right or provision
+        of these Terms shall not constitute a waiver of that right or provision.
+      </p>
+    </section>
+
+    <!-- Section 19 -->
+    <section id="t19">
+      <h2>19. Contact Information</h2>
+      <p>
+        If you have any questions about these Terms of Service, please contact us:
+      </p>
+      <ul>
+        <li>
+          <strong>Email:</strong>
+          <a href="mailto:srinfodevelopers@gmail.com">srinfodevelopers@gmail.com</a>
+        </li>
+        <li><strong>Developer:</strong> BrainQ</li>
+        <li><strong>Country:</strong> India</li>
+      </ul>
+      <div class="highlight">
+        For support or feedback regarding the App, please use the in-app contact
+        feature (Settings → Contact Us).
+      </div>
+    </section>
+
+  </div><!-- /wrapper -->
+
+  <footer>
+    <p>
+      <a href="./">Home</a> &nbsp;·&nbsp;
+      <a href="./privacy-policy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="./terms-of-service">Terms of Service</a> &nbsp;·&nbsp;
+      <a href="mailto:srinfodevelopers@gmail.com">Contact</a>
+    </p>
+    <p style="margin-top:8px;">© 2026 BrainQ. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
